@@ -6,8 +6,8 @@ import GaugeComponent from 'react-gauge-component';
 import logo from './assets/Images/Logo-PT-INKA.png';
 import io from 'socket.io-client';
 
-const MAX_DATA_COUNT = 10;
-const MAX_SPEED = 80;
+const MAX_DATA_COUNT = 20;
+const MAX_SPEED = 320;
 const gaugeLimits = [
   { limit: 20, color: '#5BE12C', showTick: true },
   { limit: 40, color: '#F5CD19', showTick: true },
@@ -206,6 +206,10 @@ function Home() {
           <div className="d-flex align-items-center">
             <h2>{currentTime}</h2>
           </div>
+        </div>
+        {/* Card 1 */}
+        <div className='button'>
+          <button onClick={() => navigate('/history')}>History</button>
         </div>
         </div>
       <div className='line-chart'>
