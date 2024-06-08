@@ -7,7 +7,7 @@ import logo from './assets/Images/Logo-PT-INKA.png';
 import io from 'socket.io-client';
 
 const MAX_DATA_COUNT = 20;
-const MAX_SPEED = 320;
+const MAX_SPEED = 350;
 const gaugeLimits = [
   { limit: 20, color: '#5BE12C', showTick: true },
   { limit: 40, color: '#F5CD19', showTick: true },
@@ -211,7 +211,7 @@ function Home() {
         <div className='button'>
           <button onClick={() => navigate('/history')}>History</button>
         </div>
-        </div>
+      </div>
       <div className='line-chart'>
         <h3>Grafik kecepatan terhadap jarak</h3>
         <ResponsiveContainer width="100%" height={200}>
