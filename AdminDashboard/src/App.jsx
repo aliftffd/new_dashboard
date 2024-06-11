@@ -1,16 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
-import HistoryPage from './History';
+import History from './History'; // Assuming you have a History component
+import { SensorProvider } from './contexts/SensorContext';
+import './App.css';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/History" element={<HistoryPage />} />
-      </Routes>
-    </Router>
+    <SensorProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/history" element={<History />} />
+        </Routes>
+      </Router>
+    </SensorProvider>
   );
 }
 
